@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   get "/sign_up" => "clearance/users#new", as: "sign_up"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "home#index"
+
+  # Authy
+  post "authy/callback" => 'authy#callback'
+  get "authy/status" => 'authy#one_touch_status'
 end
