@@ -58,6 +58,8 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    authy (2.7.5)
+      httpclient (>= 2.5.3.3)
     bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.5)
@@ -88,6 +90,7 @@ GEM
     ffi (1.11.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    httpclient (2.8.3)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.9.1)
@@ -210,6 +213,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  authy
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
