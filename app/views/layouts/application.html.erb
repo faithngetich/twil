@@ -5,7 +5,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag    '//cdnjs.cloudflare.com/ajax/libs/authy-forms.css/2.2/form.authy.min.css', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/authy-forms.js/2.2/form.authy.min.js', 'data-turbolinks-track' => true %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
