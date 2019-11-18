@@ -6,7 +6,7 @@ This is a Rails 6 application that authenticates users using Authy and Clearance
 
 * Clone the Repo into a folder of your choice
 
-    `git clone https://github.com/faithngetich/demo-app`
+    `git clone https://github.com/faithngetich/demo-app.git`
 
 * Navigate inside your newly created application's folder.
 
