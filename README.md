@@ -1,24 +1,47 @@
-# README
+# Authenticating Users using Authy and Clearance
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails 6 application that authenticates users using Authy and Clearance
 
-Things you may want to cover:
+**Installation.**
 
-* Ruby version
+* Clone the Repo into a folder of your choice
 
-* System dependencies
+    `git clone https://github.com/faithngetich/demo-app`
 
-* Configuration
+* Navigate inside your newly created application's folder.
 
-* Database creation
+   `$ cd demo-app`
 
-* Database initialization
+* Db setup
 
-* How to run the test suite
+   `$ bin/rails db:migrate`
 
-* Services (job queues, cache servers, search engines, etc.)
+* Install dependecies.
 
-* Deployment instructions
+   `$ bundle`
 
-* ...
+* Start up the application.
+
+    `$ rails server`
+
+**Configuring Authy**
+
+Grab your production API key from your[console](https://www.twilio.com/console/authy) and export it in your environment.
+
+ `$ export AUTHY_API_KEY=Your Authy API Key`
+
+**Setting up the webhook URL.**
+
+* Setup and install ngrok using the [official documentation](https://dashboard.ngrok.com/get-started).
+
+* Run `$./ngrok http 3000`
+
+* Add the configuration to your environment configuration in the `config/environments/development.rb` to allow requests to the ngrok url.
+
+   `config.file_watcher = ActiveSupport::EventedFileUpdateChecker`
+   `config.hosts << "n9220399.ngrok.io"`
+
+* Restart the server and try accessing the ngrok link.
+
+* Got to your app’s authy console and set webhook endpoint/URL for authy to post it’s.
+The URL looks something like this http://396ofdef.ngrok.io/authy/callback
